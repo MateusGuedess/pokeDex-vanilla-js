@@ -35,8 +35,8 @@ Porém pode seguir o layout:
 ## Dicas:
 Como o legal é entender bem o JavaScript e CSS, temos alguns sites que vão ajudar na hora de desenvolver.
 
-[FecthAPI](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API)
-[ParentNode.append() - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append)
+[FecthAPI](https://developer.mozilla.org/pt-BR/docs/Web/API/Fetch_API),
+[ParentNode.append() - Web APIs | MDN](https://developer.mozilla.org/en-US/docs/Web/API/ParentNode/append),
 [CSS](https://tableless.com.br/oocss-smacss-bem-dry-css-afinal-como-escrever-css/)
 
 Lembre que qualquer dúvida estaremos aqui para ajudar! 🖤
