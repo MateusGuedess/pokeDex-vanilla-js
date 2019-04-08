@@ -5,6 +5,7 @@ function getPokemons(pokemonName) {
   fetch(`https://pokeapi.co/api/v2/pokemon/`)
   .then( res => res.json())
   .then( data => {
+    console.log(data)
     return addPokemon(data)
   })
   .catch((err) => {
@@ -25,29 +26,48 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
 
 function addPokemon(data) {
-  const ulCount = 0
-  data.results.map( (pokemon, index) => {
 
-    4 % index === 0 ? ulCount++ : console.log("ainda não é hora de incrementar")
+  for( pokemon in data.results) {
+    console.log(data.results[pokemon])
+    const section = document.getElementById("summary")
+    const divPokemonBlock = document.createElement("div")
+    divPokemonBlock.className = "pokemon-block"
+    section.append(divPokemonBlock)
+  }
 
-    const ul = document.getElementById("summary").getElementsByTagName("ul")[ulCount]
-    
-    const li = document.createElement("li")
-    const div = document.createElement("div")
-    const pokemonImage = document.createElement("div")
-    const image = document.createElement("img")
-    const pokemonName = document.createElement("div")
-    const name = document.createElement("span")
-    name.textContent = pokemon.name
+  // data.results.map( (pokemon, index) => {
+  //   createBlock(pokemon)
+  // })
+}
 
-    ul.append(li)
-
-    pokemonName.append(name)
-    pokemonImage.append(image)
-    div.append(pokemonImage)
-    div.append(pokemonName)
-    li.append(div)
+function createBlock(pokemon) {
     console.log(pokemon)
+    const section = document.getElementById("summary")
     
-  })
+
+
+    const divPokemonBlock = document.createElement("div")
+    divPokemonBlock.className = "pokemon-block"
+
+    // const divPokemon = document.createElement("div")
+    // divPokemon.className += "pokemon"
+
+    // const pokemonImage = document.createElement("div")
+    // pokemonImage += "pokemon-image"
+
+    // const image = document.createElement("img")
+    // image.src += 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png'
+
+    // const pokemonName = document.createElement("div")
+    // pokemonName.className += "pokemon-name"
+
+    // const name = document.createElement("span")
+    // name.textContent = pokemon.name
+
+    // pokemonName.append(name)
+    // pokemonImage.append(image)
+    // divPokemon.append(pokemonImage)
+    // divPokemon.append(pokemonName)
+    // divPokemonBlock.append(divPokemon)
+    section.append(divPokemonBlock)
 }

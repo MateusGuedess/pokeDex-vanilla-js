@@ -2,6 +2,16 @@
 <html>
   <header>
     <style>
+      .summary {
+        display: flex;
+        flex-wrap: wrap;
+        padding-left: 11%;
+      }
+
+      .pokemon-block {
+        flex: 1 0 21%;
+      }
+
       .pokemon {
         background-color: #FBEAFF;
         transition: 1s;
@@ -29,6 +39,8 @@
         background-color: grey;
       }
 
+
+
       ul {
         display: flex;
         justify-content: space-around;
@@ -49,9 +61,8 @@
       </form>
     </section>
     <section class="summary" id="summary">
-      <ul id="lista-de-pokemons">
-        <li>
-            <div class="pokemon">
+            <div class="pokemon-block">
+              <div class="pokemon">
                 <div class="pokemon-image">
                   <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png'/>
                 </div>
@@ -59,38 +70,8 @@
                   <span>Pikachu</span>
                 </div>
               </div>
-        </li>
-        <li>
-            <div class="pokemon">
-                <div class="pokemon-image">
-                  <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png'/>
-                </div>
-                <div class="pokemon-name">
-                  <span>Pikachu</span>
-                </div>
-              </div>
-        </li>
-        <li>
-            <div class="pokemon">
-                <div class="pokemon-image">
-                  <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png'/>
-                </div>
-                <div class="pokemon-name">
-                  <span>Pikachu</span>
-                </div>
-              </div>
-        </li>
-        <li>
-            <div class="pokemon">
-                <div class="pokemon-image">
-                  <img src='https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/back/25.png'/>
-                </div>
-                <div class="pokemon-name">
-                  <span>Pikachu</span>
-                </div>
-              </div>
-        </li>
-      </ul>
+            </div>
+
     </section>
     <script type="text/javascript" src="index.js"></script>
   </body>
